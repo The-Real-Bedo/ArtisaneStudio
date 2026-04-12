@@ -13,7 +13,7 @@ body{
     position: fixed;
     z-index: 10;
     top: 0;
-    /* background-color: #b8b8b887; */
+    background-color: #b8b8b887;
 }
 .header-list{
     float: right;
