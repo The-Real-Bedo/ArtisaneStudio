@@ -2,11 +2,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
+/* ---------------------------------Header------------------------------------------------- */
 .header{
     width: 90%;
     height: 80px;
@@ -31,10 +34,8 @@ body{
     text-decoration: none;
     position: relative;
     top: -5px;
-    font-size: 13px;
-    font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 600;
     letter-spacing: 1;
+    font: normal 600 13px "Montserrat Alternates", sans-serif;
     transition: 0.5s;
 }
 .header-list li a:hover{
@@ -60,8 +61,8 @@ body{
     letter-spacing: 1.5;
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 400;
-    transition: 0.7s;
     border: 1px solid #c6c6c6;
+    transition: 0.5s;
 }
 .header-search .searchIcon{
     position: absolute;
@@ -79,10 +80,8 @@ body{
     font-weight: 600;
 }
 .header .homeIcon{
-    font-family: "Indie Flower",cursive;
-    font-weight: 900;
+    font: italic 900 35px "Indie Flower",cursive;
     margin-right: 5px;
-    font-size: 35px;
     position: relative;
     top: 5px;
     color: rgb(193, 99, 0);
@@ -93,7 +92,7 @@ body{
 }
 .header-search input:focus{
     width: 420px;
-    transition: 0.7s;
+    transition: 0.5s;
 }
 .pricing-list {
     width: 190px;
@@ -115,7 +114,6 @@ body{
 .pricing-list li a {
     color: rgb(255, 255, 255);
 }
-
 .dropdown-list:hover .pricing-list {
     opacity: 1;
     visibility: visible;
@@ -137,6 +135,10 @@ body{
     transition: 0.5s;
 }
 
+/* global style */
+p::selection , h1::selection, h2::selection, h3::selection ,li::selection , span::selection , button::selection{
+    background-color: rgba(254, 131, 0, 0.523);
+}
 .iconGit, .iconX{
     color: black;
 }
@@ -149,19 +151,19 @@ body{
 button:hover{
     cursor: pointer;
 }
-
-
-p::selection , h1::selection, h2::selection, h3::selection ,li::selection , span::selection , button::selection{
-    background-color: rgba(254, 131, 0, 0.523);
+h2{
+    font-family: "Revalia", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #c4a759;
 }
+
+/* ---------------------------------home-section------------------------------------------------- */
 .home-section{
     width: 100%;
     height: 100vh;
     position: relative;
     background-image: url(../assets/home-back2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 .home-overlay{
     background-color: rgba(0, 0, 0, 0.096);
@@ -177,12 +179,6 @@ p::selection , h1::selection, h2::selection, h3::selection ,li::selection , span
     left: 50%;
     position: absolute;
     transform: translate(-50%,-50%);
-}
-h2{
-    font-family: "Revalia", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    color: #c4a759;
 }
 .home-title{
     color: rgba(255, 255, 255, 0.915);
@@ -204,28 +200,25 @@ h2{
     height: 55px;
     border-radius: 15px;
     border: none;
-    font-size: 18px;
     margin: 25px 5px;
-    font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 600;
+    font: normal 600 18px "Montserrat Alternates", sans-serif;
     cursor: pointer;
+    transition: 0.5s;
 }
 .home .btn-explore{
     background-color:#da7800;
     color: rgb(244, 244, 244);
 }
 .home button:hover{
-    /* background-color: rgba(75, 53, 14, 0.599); */
     opacity: 0.8;
-    /* width: 178px;
-    height: 53px;
-    font-size: 17px; */
-    transform: translate(0,-10px);
-    transition: 0.2s;
+    width: 182px;
+    height: 57px;
+    font-size: 18px;
+    transform: translate(0,-3px);
+    transition: 0.7s;
 }
 
-
-
+/* ---------------------------------about-section------------------------------------------------- */
 .about-section{
     width: 100%;
     height: 100vh;
@@ -258,7 +251,6 @@ h2{
     padding: 10px;
     position: relative;
     z-index: 1;
-    /* background-color: rgba(163, 163, 163, 0.22);   */
     background-color: rgba(255, 173, 50, 0.081);
 }
 .about-info::before{
@@ -272,7 +264,6 @@ h2{
     border-radius: 10px;
     z-index: -1;
     transition: 0.5s;
-    
 }
 .about-info:hover::before{
     width: 100%;
@@ -298,7 +289,6 @@ h2{
     transition: 1.2s;
 
 }
-
 .about-info i{
     color: rgb(227, 160, 34);
     font-size: 40px;
@@ -318,7 +308,6 @@ h2{
 }
 .about-info a:hover{
     text-decoration: underline;
-    /* transition: 0.5s; */
 }
 .about-info-container .card1 , .about-info-container .card2{
     margin-right: 10%;
@@ -327,9 +316,7 @@ h2{
     margin-left: 2.5%;
 }
 
-
-
-
+/* ---------------------------------featured-section------------------------------------------------- */
 .featured-works-section{
     width: 100%;
     height: 100vh;
@@ -356,9 +343,6 @@ h2{
     float: left;
     color: aliceblue;
     position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 .container-one .block1 , .container-one  .block2 , .container-two .block4 , .container-two  .block5{
     margin-right: 2.5%;
@@ -373,11 +357,9 @@ h2{
     color: rgba(255, 238, 200, 0.85);
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 900;
-    /* font-style: italic; */
 }
 .featured-blocks p{
     font-size: 14px;
-    
     margin: 30px 0;
     color: rgb(255, 255, 255);
     font-family: "Montserrat Alternates", sans-serif;
@@ -386,7 +368,7 @@ h2{
 }
 .featured-blocks i{
     font-size: 28px;
-    color: rgb(83, 83, 83);
+    color: rgb(40, 40, 40);
     background-color: rgba(255, 255, 255, 0.685);
     border-radius: 10px;
     padding-top: 4px;
@@ -432,7 +414,7 @@ h2{
     background-image: url(../assets/Furniture.png);
 }
 
-
+/* ---------------------------------services-section------------------------------------------------- */
 .services-section{
     width: 100%;
     height: 100vh;
@@ -455,10 +437,8 @@ h2{
     margin: 30px 50px;
     padding: 30px 40px 0 50px;
     position: relative;
-    /* background-color: rgba(163, 163, 163, 0.22); */
     background-color: rgba(255, 173, 50, 0.081);
-    z-index: 1;
-    
+    z-index: 1; 
 }
 .services-parent .block1 , .services-parent .block4{
     margin-left: 9.5%;
@@ -480,7 +460,6 @@ h2{
     height: 100%;
     transition: 0.5s;
 }
-
 .services-blocks h3{
     color:#4b4b4b;
     font-size: 28px;
@@ -507,16 +486,13 @@ h2{
 .services-blocks:hover i{
     color: rgb(231, 120, 1);
     font-size: 30px;
-    transition: 0.7s;
-
+    transition: 1.7s;
 }
 .services-blocks:hover p{
     color: rgb(99, 53, 0);
 }
 
-
-
-
+/* ---------------------------------special-section------------------------------------------------- */
 .special-section{
     width: 100%;
     height: 100vh;
@@ -540,11 +516,9 @@ h2{
     width: 60%;
     height: 100%;
     float: left; 
-    /* background-color: rgba(255, 238, 200, 0.85); */
 }
 .special-image-div{
     width: 40%;
-    /* background-color: rgba(254, 131, 0, 0.523); */
 }
 .special-advantages{
     padding-left: 120px;
@@ -584,9 +558,6 @@ h2{
     margin: 30px 110px;
     border-radius: 10px;
     background-image: url(../assets/special.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     transition: 1s;
 }
 .sweeper-dot{
@@ -623,24 +594,7 @@ h2{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ---------------------------------achievement-section------------------------------------------------- */
 .achievement-section{
     width: 100%;
     height: 400px;
@@ -650,10 +604,7 @@ h2{
     width: 100%;
     padding: 40px;   
     background-image: url(../assets/fetBack.png);
-    background-position: center;
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
 }
 .achievement-parent{
@@ -663,7 +614,6 @@ h2{
     overflow: auto;
     position: relative;
 }
-
 .achievement-overlay{
     top: 0;
     left: 0;
@@ -677,7 +627,6 @@ h2{
     margin: 7.5% 120px;
     list-style: none;
     color: rgb(255, 255, 255);
-    /* font-size: 17px; */
 }
 .achievement-elements .li-one{
     margin-left: 12%;
@@ -695,10 +644,7 @@ h2{
     transition: 0.5s;
 }
 
-
-
-
-
+/* ---------------------------------pricing-section------------------------------------------------- */
 .pricing-section{
     width: 100%;
     height: 115vh;
@@ -719,17 +665,15 @@ h2{
 .pricing-blocks{
     width: 21%;
     height: 50%;
-    border-radius: 10px;
+    border-radius: 35px 0 35px 0;
     float: left;
     margin: 50px 35px;
     text-align: center;
     padding-top: 40px;
     position: relative;
     z-index: 1;
-    /* background-color: #6c6c6c31; */
     background-color: rgba(255, 173, 50, 0.081);
 }
-
 .pricing-parent .block1{
     margin-left: 15%;
 }
@@ -740,8 +684,7 @@ h2{
     top: 0;
     left: 0;
     position: absolute;
-    border-radius: 10px;
-    /* background-color: rgb(255, 255, 255); */
+    border-radius: 35px 0 35px 0;
     background-color: rgba(255, 173, 50, 0.322);
     transition: 0.7s;
     z-index: -1;
@@ -759,12 +702,10 @@ h2{
     list-style: none;
     font-size: 18px;
     line-height: 2.6;
-    /* color: rgb(62, 44, 12); */
     color: rgb(102, 102, 102);
 }
 .pricing-blocks:hover .pricing-text-list li{
     color: rgb(99, 53, 0);
-
 }
 .price-circle{
     width: 110px;
@@ -779,19 +720,18 @@ h2{
     font-size: 38px;
 }
 .price-circle p{
-    color: rgba(0, 0, 0, 0.703);
+    color: rgb(0, 0, 0);
 }
-
 .pricing-btn{
     width: 200px;
     height: 38px;
-    border-radius: 15px;
+    border-radius: 8px;
     margin-top: 25px;
     font-size: 16px;
     border: none;
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 600;
-    transition: 0.3s;
+    transition: 0.1s;
     background-color: rgb(255, 146, 30);
     color: #ffffff;
 }
@@ -807,8 +747,7 @@ h2{
     font-size: 14.5px;
 }
 
-
-
+/* ---------------------------------team-section------------------------------------------------- */
 .team-section{
     width: 100%;
     height: 450px;
@@ -818,10 +757,7 @@ h2{
     width: 100%;
     padding: 40px;   
     background-image: url(../assets/teBack.png);
-    background-position: center;
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
 }
 .team-parent{
@@ -851,9 +787,6 @@ h2{
 }
 .profile-pic{
     background-image: url(../assets/sen.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -888,6 +821,7 @@ h2{
     background-image: url(../assets/exp.png);
 }
 
+/* ---------------------------------core-team-section------------------------------------------------- */
 .core-team-section{
     width: 100%;
     height: 100vh;
@@ -1010,9 +944,7 @@ h2{
     opacity: 1; 
 }
 
-
-
-
+/* ---------------------------------latest-news-section------------------------------------------------- */
 .latest-news-section{
     width: 100%;
     height: 100vh;
@@ -1043,7 +975,6 @@ h2{
     margin-left: 0;
     padding: 20px 30px;
     color: rgb(75, 53, 14);
-    /* background-color: rgba(255, 173, 50, 0.081); */
     position: relative;
     z-index: 1; 
 }
@@ -1057,7 +988,6 @@ h2{
     top: 0;
     left: 0;
     position: absolute;
-    /* background-color: rgba(168, 168, 168, 0.418); */
     background-color: rgba(255, 173, 50, 0.282);
     border-radius: 10px;
     z-index: -1;
@@ -1077,9 +1007,6 @@ h2{
     width: 80%;
     height: 280px;
     border-radius: 10px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     margin: auto;
 }
 .cards-social{
@@ -1127,7 +1054,7 @@ h2{
     background-image: url(../assets/news3.png);
 }
 
-
+/* ---------------------------------footer-section------------------------------------------------- */
 .footer-section{
     width: 100%;
     height: 380px;
@@ -1148,32 +1075,31 @@ h2{
     height: 220px;
     background-color: aqua;
     background-image: url(../assets/footer.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
     border-radius: 10px;
     margin: -100px auto;
 }
 .follow-us{
     position: absolute;
-    left:695px;
+    left:685px;
     top: 240px;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
+    font-weight: 700;
 }
 .footer-socials{
     overflow: auto;
     padding-top: 10px;
     margin-top: 140px;
+    margin-left: 25px;
 }
 .footer-socials .social-icon{
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.703);
     padding-top: 10px;
-    font-size: 40px;
+    font-size: 30px;
     float: left;
     margin-right: 5px;
     transition: 0.4s;
@@ -1183,15 +1109,15 @@ h2{
 }
 .social-icon:hover{
     background-color: rgb(0, 0, 0);
-    /* position: relative; */
     margin-top: -10px;
     transition: 0.5s;
 }
 .copy-right{
     margin-top: 65px;
-    margin-left: 540px;
+    margin-left: 525px;
     text-transform: uppercase;
-    font-size: 13px;
+    text-decoration:none;
+    font-size: 12px;
     color: rgb(0, 0, 0);
 }
 .footer-socials a i{
