@@ -11,8 +11,8 @@ A luxury interior design agency landing page built using pure HTML and CSS. This
 - **Parallax Effect:** A smooth parallax background section highlighting agency achievements.
 
 ## 🛠️ Tech Stack
-- **HTML5:** Semantic structure.
-- **CSS3:** Custom styling, layout management, and parallax effects.
+- **HTML:** Semantic structure.
+- **CSS:** Custom styling, layout management, and parallax effects.
 - **Webfonts:** Integrated typography for a premium look.
 
 ## ⚠️ Important Note
